@@ -8,3 +8,14 @@ Assuming you have a ~/.aws/config with some pretty powerful permssions, you only
 # Functionality
 It's pretty straight forward. Every five minutes we will query the EC2 API for instances in the running state and post the value to CloudWatch via the metric `NumberRunningInstances`.
 
+
+#package need to be installed for ubuntu
+apt-get install python-virtualenv
+apt-get install zip
+#update region , here we change to ap-southeast-2
+cat create-or-update-function.sh
+REGION=${REGION:-ap-southeast-2}
+
+#run
+make deploy
+
